@@ -15,33 +15,34 @@
             <fieldset>
                 <legend>Sign-up</legend>
                 <div class="first-name-field">
-                    <label for="first_name">First Name *</label>
+                    <label for="first_name" data-help=" use letters only">First Name *</label>
                     <input type="text" name="first_name" id="first_name" placeholder="Juan" pattern="[a-zA-Z]+" required>
                 </div>
 
                 <div class="last-name-field">
-                    <label for="last_name">Last Name *</label>
+                    <label for="last_name" data-help=" use letters only">Last Name *</label>
                     <input type="text" name="last_name" id="last_name" placeholder="Perez" pattern="[a-zA-Z]+" required>
                 </div>
 
                 <div class="email-field">
-                    <label for="email">Email *</label>
+                    <label for="email" data-help=" format: example@email.com">Email *</label>
                     <input type="email" name="email" id="email" placeholder="example@mail.com" required>
                 </div>
 
                 <div class="phone-field">
-                    <label for="phone">Phone Number</label>
+                    <label for="phone" data-help=" use numbers only">Phone Number</label>
                     <input type="tel" name="phone" id="phone" placeholder=""  pattern="[0-9]+">
                 </div>
 
                 <div class="pw-field">
                     <label for="password">Password *</label>
                     <input type="password" name="password" id="password" placeholder="" minlength="6" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
+                    <span class="password-help">Must include at least six charactes, one upper case, one lower case and a number</span>
                 </div>
                 
                 <div class="confirm-field">
-                    <label for="confirm">Confirm Password</label>
-                    <input type="password" name="confirm" id="confirm" placeholder="" minlength="6">
+                    <label for="confirm">Confirm Password *</label>
+                    <input type="password" name="confirm" id="confirm" placeholder="" minlength="6" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
                 </div>
                 
                 <div class="newsletter-field">

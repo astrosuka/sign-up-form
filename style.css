@@ -4,6 +4,7 @@
     --primary: #918fe4;
     --secondary: #fff;
     --accent: #d2f898;
+    --hyperaccent: hsl(84, 100%, 78%);
     
     --shadow: 1px 1px 8px #5555;
     --shadow2: 1px 1px 5px #0002;   
@@ -19,6 +20,7 @@ html {
     box-sizing: inherit;
     padding: 0;
     margin: 0;
+    transition: 300ms;
 }
 
 body {
@@ -139,17 +141,16 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     cursor: pointer;
+    background-color: var(--hyperaccent);
 }
 
 input::placeholder {
     color: #0003
 }
-input:focus {
-    outline: none;
+input:focus, 
+button:focus {
+    outline: var(--primary) 2px solid;
 }
-
-/* input[type="text"]:invalid {
-} */
 
 input[type="text"]:not(:placeholder-shown):invalid,
 input[type="email"]:not(:placeholder-shown):invalid,
@@ -158,6 +159,19 @@ input[type="password"]:not(:placeholder-shown):invalid {
     outline: #f004 2px solid;
 }
 
+label:has(+ input:not(:placeholder-shown):invalid:focus):after {
+    content: attr(data-help);
+    color: #f009;
+    font-style: italic;
+}
+
+.password-help {
+    display: block;
+    margin-top: 1rem;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 0.5 px;
+}
 
 input[type="text"]:not(:placeholder-shown):valid:focus,
 input[type="email"]:not(:placeholder-shown):valid:focus,
