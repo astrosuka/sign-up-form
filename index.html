@@ -15,33 +15,33 @@
             <fieldset>
                 <legend>Sign-up</legend>
                 <div class="first-name-field">
-                    <label for="first_name">First Name:</label>
-                    <input type="text" name="first_name" id="first_name">
+                    <label for="first_name">First Name *</label>
+                    <input type="text" name="first_name" id="first_name" placeholder="Juan" pattern="[a-zA-Z]+" required>
                 </div>
 
                 <div class="last-name-field">
-                    <label for="last_name">Last Name:</label>
-                    <input type="text" name="last_name" id="last_name">
+                    <label for="last_name">Last Name *</label>
+                    <input type="text" name="last_name" id="last_name" placeholder="Perez" pattern="[a-zA-Z]+" required>
                 </div>
 
                 <div class="email-field">
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="email">
+                    <label for="email">Email *</label>
+                    <input type="email" name="email" id="email" placeholder="example@mail.com" required>
                 </div>
 
                 <div class="phone-field">
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" name="phone" id="phone">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" name="phone" id="phone" placeholder=""  pattern="[0-9]+">
                 </div>
 
                 <div class="pw-field">
-                    <label for="password">Password:</label>
-                    <input type="password" name="password" id="password">
+                    <label for="password">Password *</label>
+                    <input type="password" name="password" id="password" placeholder="" minlength="6" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
                 </div>
                 
                 <div class="confirm-field">
-                    <label for="confirm">Confirm Password:</label>
-                    <input type="password" name="confirm" id="confirm">
+                    <label for="confirm">Confirm Password</label>
+                    <input type="password" name="confirm" id="confirm" placeholder="" minlength="6">
                 </div>
                 
                 <div class="newsletter-field">
